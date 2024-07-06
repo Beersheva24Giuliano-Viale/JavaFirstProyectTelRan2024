@@ -22,6 +22,13 @@ public class CalculationsTest {
     void divTest(){
         assertEquals(0, divide(0, 4));
         assertEquals(2, divide(6, 3));
+        try {
+            divide(10, 0); // should throw an exception
+            fail("expected throw exception");
+        } catch (IllegalArgumentException e) {
+            // its expected that gets here when the exception is throw
+            assertEquals("the denominator cant be 0", e.getMessage());
+        }
     }
     @Test
     void subsTest(){
