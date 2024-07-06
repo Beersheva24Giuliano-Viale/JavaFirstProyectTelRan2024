@@ -26,10 +26,14 @@ public class Calculations {
     }
 
     public static int sumOfDigits(int number) {
-        // i convert the number to a string so i can use the string method that counts
-        // de value of it
-        String numberStr = String.valueOf(number);
-        return numberStr.length();
+        int sum = 0;
+        
+        while (number != 0) {
+            sum += number % 10; // add the last number to the sum
+            number /= 10; // erase the last number
+        }
+        
+        return sum;
     }
 
     public static int maxDigit(int number) {

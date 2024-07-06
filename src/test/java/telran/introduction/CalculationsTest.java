@@ -37,10 +37,10 @@ public class CalculationsTest {
     }
     @Test
     void sumDigitsTest(){
-        assertEquals(1 ,sumOfDigits(1));
-        assertEquals(2 ,sumOfDigits(12));
-        assertEquals(3 ,sumOfDigits(123));
-        assertEquals(4 ,sumOfDigits(5436));
+        assertEquals(6 ,sumOfDigits(123));
+        assertEquals(3 ,sumOfDigits(12));
+        assertEquals(12 ,sumOfDigits(1236));
+        assertEquals(18 ,sumOfDigits(5436));
     }
     @Test
     void maxDigTest(){
